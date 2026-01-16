@@ -42,6 +42,11 @@ body {
     padding: 0 24px;
 }
 
+/* Широкий контейнер для страницы оферты */
+.legal .container {
+    max-width: 1400px;
+}
+
 /* Typography */
 h1, h2, h3, h4 {
     font-weight: 700;
@@ -505,11 +510,31 @@ h4 { font-size: 1.125rem; }
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Широкая версия для страницы оферты */
+.legal-grid.legal-wide {
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.legal-grid.legal-wide .legal-card {
+    padding: 60px;
+    max-width: 100%;
+}
+
 .legal-card h2 {
     font-size: 1.5rem;
     margin-bottom: 24px;
     padding-bottom: 16px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.legal-content h3 {
+    color: var(--primary-light);
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
 }
 
 .legal-content h4 {
@@ -520,7 +545,26 @@ h4 { font-size: 1.125rem; }
 
 .legal-content p {
     color: var(--gray);
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.legal-content ul {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-left: 24px;
+    margin-bottom: 16px;
+}
+
+.legal-content ul li {
+    margin-bottom: 8px;
+}
+
+.legal-content ul ul {
+    margin-top: 8px;
+    margin-left: 24px;
 }
 
 /* Contacts Page */
@@ -642,6 +686,52 @@ h4 { font-size: 1.125rem; }
 .social-icon svg {
     width: 24px;
     height: 24px;
+}
+
+/* Payment Details */
+.payment-details {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.payment-details h2 {
+    font-size: 1.75rem;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.payment-info {
+    background: var(--dark-lighter);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.payment-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.payment-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.payment-item strong {
+    display: block;
+    color: var(--gray-light);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.payment-item p {
+    color: var(--white);
+    font-size: 1.125rem;
+    font-weight: 500;
 }
 
 /* Contact Form */
